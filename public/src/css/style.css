@@ -17,6 +17,13 @@ main img {
     width: 100%;
 }
 
+i {
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block
+}
+
 
 /*header*/
 
@@ -30,13 +37,7 @@ header {
     align-items: center;
 }
 
-.logo {
-    height: 30px;
-    padding: .5em 1em;
-    display: block;
-}
-
-nav li {
+li {
     display: inline-block;
     list-style: none;
     height: 100%;
@@ -44,20 +45,19 @@ nav li {
     margin-right: 15px;
 }
 
-nav li a {
+li a {
     color: white;
     text-decoration: none;
 }
 
-nav li a img {
-    height: 1em;
-    position: relative;
-    margin-right: .3em;
-    top: 6px;
+li a:hover {
+    color: #d84a4a;
 }
 
-nav li a:hover {
-    color: #d84a4a;
+.logo {
+    height: 30px;
+    padding: .5em 1em;
+    display: block;
 }
 
 .header-img {
@@ -140,12 +140,12 @@ nav li a:hover {
     max-width: 100%;
     position: absolute;
     top: 0;
-    left: 100%;
-    transition: left .3s;
+    transform: translateX(100%);
+    transition: transform .3s;
 }
 
 .product.product-active {
-    left: 0;
+    transform: translateX(0);
 }
 
 .appearance-products-inner > h1 {
