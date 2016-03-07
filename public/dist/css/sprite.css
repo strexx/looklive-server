@@ -1,0 +1,54 @@
+.icn-brands {
+	background: url("svg/sprite-9511116d.svg") 0 0 no-repeat;
+}
+
+.icn-brands-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.icn-home {
+	background: url("svg/sprite-9511116d.svg") 50% 0 no-repeat;
+}
+
+.icn-home-dims {
+	width: 20px;
+	height: 17.45px;
+}
+
+.icn-latest {
+	background: url("svg/sprite-9511116d.svg") 0 100% no-repeat;
+}
+
+.icn-latest-dims {
+	width: 18.4px;
+	height: 20px;
+}
+
+.icn-music {
+	background: url("svg/sprite-9511116d.svg") 45.99999999999999% 100% no-repeat;
+}
+
+.icn-music-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.icn-people {
+	background: url("svg/sprite-9511116d.svg") 100% 0 no-repeat;
+}
+
+.icn-people-dims {
+	width: 20px;
+	height: 17.77px;
+}
+
+.icn-shows {
+	background: url("svg/sprite-9511116d.svg") 100% 76.07020547945206% no-repeat;
+}
+
+.icn-shows-dims {
+	width: 20px;
+	height: 16.64px;
+}
+
