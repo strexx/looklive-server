@@ -1,12 +1,17 @@
 var gulp = require('gulp'),
     babel = require('gulp-babel'),
     uglify = require('gulp-uglify'),
+    watch = require('gulp-watch'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     cssnano = require('gulp-cssnano'),
     sass = require('gulp-sass'),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
+    cleanCSS = require('gulp-clean-css'),
     imageop = require('gulp-image-optimization'),
-    svgSprite = require('gulp-svg-sprite');
+    svgSprite = require('gulp-svg-sprite'),
+    htmlmin = require('gulp-htmlmin');
 
 var svgConfig = {
     dest: '.',
@@ -65,6 +70,14 @@ gulp.task('scripts', function (cb) {
         }));
 });
 
+gulp.task('html', function () {
+    return gulp.src('views/*.hbs')
+        .pipe(htmlmin({
+            collapseWhitespace: true
+        }))
+        .pipe(gulp.dest('views'))
+});
+
 gulp.task('images', function (cb) {
     gulp.src(['./public/src/images/*.png', './public/src/images/*.jpg', './public/src/images/*.gif', './public/src/images/*.jpeg']).pipe(imageop({
         optimizationLevel: 5,
@@ -77,4 +90,25 @@ gulp.task('images', function (cb) {
 // Default task
 gulp.task('default', function () {
     gulp.start('styles', 'scripts');
+});
+
+// Watch
+gulp.task('watch', function () {
+    watch('./public/src/css/*.css', function () {
+        gulp.src(['./public/src/css/*.css', './public/dist/css/sprite.css'])
+            .pipe(concat('style.css'))
+            .pipe(cleanCSS({
+                compatibility: 'ie8'
+            }))
+            .pipe(postcss([autoprefixer({
+                browsers: ['> 1%', 'IE 7']
+            })]))
+            .pipe(gulp.dest('./public/dist/css/'))
+            .pipe(notify({
+                message: 'styles task complete'
+            }));
+    });
+    watch('./public/src/js/*.js', function () {
+        gulp.start('scripts');
+    });
 });
