@@ -12,8 +12,8 @@ var svgConfig = {
     dest: '.',
     shape: {
         dimension: {
-            maxWidth: 20,
-            maxHeight: 20
+            maxWidth: 15,
+            maxHeight: 15
         },
         spacing: {
             padding: 1,

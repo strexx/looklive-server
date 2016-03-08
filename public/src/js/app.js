@@ -22,7 +22,6 @@ var helper = (function () {
     };
 })();
 
-
 document.addEventListener('DOMContentLoaded', function () {
     var uuid = helper.one('.product').attributes['data-uuid'].value,
         productIndicator = helper.all('.product-indicator');
