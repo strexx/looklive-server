@@ -1,4 +1,8 @@
 # LookLive server
+![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)
+![forthebadge](http://forthebadge.com/images/badges/uses-html.svg)
+![forthebadge](http://forthebadge.com/images/badges/uses-css.svg)
+![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)
 
 The project you're looking at is an [express.js](http://expressjs.com) project. You'll use it to get set up a development environment where you're
 going to optimize the way this project works. In it's current state, the css is messy, the rendering isn't modern and
@@ -11,7 +15,7 @@ Github provides some instructions for this and we're assuming that you know how 
 don't hesitate to raise your hand now and ask.
 
 ### Step 2 - install dependencies
-In order to run the server you'll need to install express.js and it's dependencies. In order to do this, open up a 
+In order to run the server you'll need to install express.js and it's dependencies. In order to do this, open up a
 terminal and navigate to your project folder (for example `cd ~/Projects/looklive-server`). When you've done this, type
 this command to run the instal:
 
@@ -36,9 +40,43 @@ you should see an overview page.
 This project comes with a simple API. All you need to know for now is that there's three endpoints:
 
 * `/api/feed/` <- returns a feed of appearances
-* `/api/appearance/:uuid` <- returns a single appearance, more detailed than in the feed. Replace `:uuid` with the 
+* `/api/appearance/:uuid` <- returns a single appearance, more detailed than in the feed. Replace `:uuid` with the
 appearance id.
-* `/api/product/:uuid` <- returns a single product, including similar and bargain products. Replace `:uuid` with the 
+* `/api/product/:uuid` <- returns a single product, including similar and bargain products. Replace `:uuid` with the
 product id.
 
 The API returns JSON (for now).
+
+#Preformance
+
+##semantic & efficient  HTML
+
+###Before
+![forthebadge](readme/opdracht-2/html-oud.png)
+###After
+![forthebadge](readme/opdracht-2/html-new.png)
+
+##optimised CSS
+
+###Before
+![forthebadge](readme/opdracht-3/css-oud.png)
+###After
+![forthebadge](readme/opdracht-3/css-new.png)
+
+
+##Optimised SVG with a spritesheet
+
+
+###Before
+![forthebadge](readme/opdracht-4/svg-oud.png)
+###After
+![forthebadge](readme/opdracht-4/svg-new.png)
+
+<!--
+##Minimale Gulp pipeline
+
+###Before
+![forthebadge](readme/opdracht-7/svg-oud.png)
+###After
+![forthebadge](readme/opdracht-7/svg-new.png)
+-->
