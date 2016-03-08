@@ -8,13 +8,16 @@ var gulp = require('gulp'),
     imageop = require('gulp-image-optimization'),
     svgSprite = require('gulp-svg-sprite');
 
-var config = {
+var svgConfig = {
     dest: '.',
     shape: {
         dimension: {
             maxWidth: 20,
             maxHeight: 20
-        }
+        },
+        spacing: {
+            padding: 1,
+        },
     },
     mode: {
         css: {
@@ -33,8 +36,8 @@ var config = {
 
 gulp.task('icons', function () {
     gulp.src('./public/src/icons/svg/*.svg')
-        .pipe(svgSprite(config))
-        .pipe(gulp.dest('public/dist/'));
+        .pipe(svgSprite(svgConfig))
+        .pipe(gulp.dest('./public/dist/'));
 });
 
 // Styles
@@ -50,7 +53,7 @@ gulp.task('styles', function (cb) {
 
 // Scripts
 gulp.task('scripts', function (cb) {
-    gulp.src('public/src/js/*.js')
+    gulp.src('./public/src/js/*.js')
         .pipe(concat('app.js'))
         .pipe(babel({
             presets: ['es2015']
