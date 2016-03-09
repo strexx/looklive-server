@@ -70,7 +70,7 @@ The API returns JSON (for now).
 ###Before
 ![forthebadge](readme/opdracht-4/svg-oud.png)
 ###After
-![forthebadge](readme/opdracht-4/svg-new.png)
+![forthebadge](readme/opdracht-4/svg-nieuw.png)
 
 <!--
 ##Minimale Gulp pipeline
