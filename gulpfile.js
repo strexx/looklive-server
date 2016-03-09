@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     imageop = require('gulp-image-optimization'),
     svgSprite = require('gulp-svg-sprite'),
+    critical = require('critical'),
     htmlmin = require('gulp-htmlmin');
 
 var svgConfig = {
@@ -84,6 +85,19 @@ gulp.task('images', function (cb) {
         progressive: true,
         interlaced: true
     })).pipe(gulp.dest('./public/dist/images/')).on('end', cb).on('error', cb);
+});
+
+gulp.task('critical', function (cb) {
+  critical.generate({
+    base: './',
+    src: 'views/index.html',
+    css: ['./public/dist/css/style.css'],
+    width: 1300,
+    height: 400,
+    dest: 'public/dist/css/critical.css',
+    minify: true,
+    extract: false
+  });
 });
 
 

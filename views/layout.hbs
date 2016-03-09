@@ -3,6 +3,9 @@
 
 <head>
     <title>{{title}}</title>
+    <style>
+    i,li{display:inline-block}.header-img,header,i{overflow:hidden}body{font:14px Raleway,Helvetica,Arial,sans-serif;background-color:#f1f1f1;margin:0}body a{color:#00B7FF}main{padding:3.4em}i{text-indent:200%;white-space:nowrap}header{background-color:#252525;display:-webkit-box;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;flex-wrap:wrap;-webkit-box-pack:justify;justify-content:space-between;align-content:space-between;-webkit-box-align:center;align-items:center;height:50vh}li{list-style:none;height:100%;line-height:30px;margin-right:15px}li a{color:#fff;text-decoration:none}.logo{height:30px;padding:.5em 1em;display:block}.header-img{height:auto;max-height:56vw;width:100%}.icn-brands{background:url(/public/dist/css/svg/sprite-c59f4ef4.svg) no-repeat}.icn-brands-dims{width:17px;height:17px}.icn-home{background:url(/public/dist/css/svg/sprite-c59f4ef4.svg) 50% 0 no-repeat}.icn-home-dims{width:17px;height:15.09px}.icn-latest{background:url(/public/dist/css/svg/sprite-c59f4ef4.svg) 0 100% no-repeat}.icn-latest-dims{width:15.8px;height:17px}.icn-music{background:url(/public/dist/css/svg/sprite-c59f4ef4.svg) 46.470588235294116% 100% no-repeat}.icn-music-dims{width:17px;height:17px}.icn-people{background:url(/public/dist/css/svg/sprite-c59f4ef4.svg) 100% 0 no-repeat}.icn-people-dims{width:17px;height:15.33px}.icn-shows{background:url(/public/dist/css/svg/sprite-c59f4ef4.svg) 100% 78.53483606557377% no-repeat}.icn-shows-dims{width:17px;height:14.48px}
+    </style>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet" type="text/css">
 </head>
@@ -22,7 +25,10 @@
         </nav>
     <img class="header-img" src="/images/header-small.jpg" srcset="/images/header-small.jpg 480w, /images/header-medium.jpg 960w, /images/header-large.jpg 1920w" alt="House of Cards">
     </header>
-    <main>{{{body}}}</main>
+    <main>
+    <noscript>Sorry je hebt JS nodig voor deze website.</noscript>
+    {{{body}}}
+    </main>
 
     <script src="/lib/director.min.js"></script>
     <script src="/js/app.js"></script>
