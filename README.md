@@ -48,7 +48,7 @@ product id.
 The API returns JSON (for now).
 
 #Preformance
-##Start preformace 
+##Start preformace
 ![forthebadge](readme/start.png)
 
 
@@ -59,7 +59,7 @@ The API returns JSON (for now).
 ###After
 ![forthebadge](readme/html-css/html-css-new.png)
 
-##Optimised SVG with a spritesheet
+##Optimised img
 
 ###Before
 ![forthebadge](readme/img/img-old.png)
