@@ -13,7 +13,7 @@ router.get('/', function (req, res, next) {
             title: 'Feed',
             items: JSON.parse(data)
         });
-    })
+    });
 });
 
 router.get('/appearance/:uuid', function (req, res, next) {
