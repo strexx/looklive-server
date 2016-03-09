@@ -15,7 +15,7 @@ var svgConfig = {
     mode: {
         css: {
             dest: '.',
-            sprite: true,
+            sprite: 'sprite.svg',
             render: {
                 css: true
             },
