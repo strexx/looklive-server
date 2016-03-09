@@ -81,4 +81,11 @@ The API returns JSON (for now).
 ###After
 ![forthebadge](readme/jquery/jquery-new.png)
 
+##SPA
+
+###Before
+![forthebadge](readme/spa/spa-old.png)
+###After
+![forthebadge](readme/spa/spa-new.png)
+
 
