@@ -30,6 +30,7 @@ h1 {
     color: #333;
 }
 
+
 /*header*/
 
 header {
@@ -71,6 +72,7 @@ li a:hover {
     height: auto;
     max-height: 56vw;
     overflow: hidden;
+    width: 100%;
 }
 
 

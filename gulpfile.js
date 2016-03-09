@@ -109,6 +109,15 @@ gulp.task('watch', function () {
             }));
     });
     watch('./public/src/js/*.js', function () {
-        gulp.start('scripts');
+        gulp.src('./public/src/js/*.js')
+            .pipe(concat('app.js'))
+            .pipe(babel({
+                presets: ['es2015']
+            }))
+//            .pipe(uglify())
+            .pipe(gulp.dest('./public/dist/js/'))
+            .pipe(notify({
+                message: 'Scripts task complete'
+            }));
     });
 });
