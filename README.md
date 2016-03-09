@@ -48,35 +48,37 @@ product id.
 The API returns JSON (for now).
 
 #Preformance
+##Start preformace 
+![forthebadge](readme/start.png)
 
-##semantic & efficient  HTML
 
-###Before
-![forthebadge](readme/opdracht-2/html-oud.png)
-###After
-![forthebadge](readme/opdracht-2/html-new.png)
-
-##optimised CSS
+##semantic & efficient  HTML/CSS
 
 ###Before
-![forthebadge](readme/opdracht-3/css-oud.png)
+![forthebadge](readme/html-css/html-css-old.png)
 ###After
-![forthebadge](readme/opdracht-3/css-new.png)
+![forthebadge](readme/html-css/html-css-new.png)
+
+##Optimised SVG with a spritesheet
+
+###Before
+![forthebadge](readme/img/img-old.png)
+###After
+![forthebadge](readme/img/img-new.png)
 
 
 ##Optimised SVG with a spritesheet
 
+###Before
+![forthebadge](readme/sprite/sprite-old.png)
+###After
+![forthebadge](readme/sprite/sprite-new.png)
+
+##No jQuery
 
 ###Before
-![forthebadge](readme/opdracht-4/svg-oud.png)
+![forthebadge](readme/jquery/jquery-old.png)
 ###After
-![forthebadge](readme/opdracht-4/svg-nieuw.png)
+![forthebadge](readme/jquery/jquery-new.png)
 
-<!--
-##Minimale Gulp pipeline
 
-###Before
-![forthebadge](readme/opdracht-7/svg-oud.png)
-###After
-![forthebadge](readme/opdracht-7/svg-new.png)
--->
