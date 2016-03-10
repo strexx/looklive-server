@@ -12,7 +12,7 @@ ll.routes = (function () {
         router.init();
     };
     //check the current route
-    function _ceckRoute() {
+    function _checkRoute() {
         //if the hash is undefined or a '' redirect to #/home
         if (location.hash === undefined || location.hash === '') {
             window.location = '#/';
@@ -22,7 +22,7 @@ ll.routes = (function () {
     //run functions
     function init() {
         _createRoutes();
-        _ceckRoute();
+        _checkRoute();
     }
     return {
         init: init

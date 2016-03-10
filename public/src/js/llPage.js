@@ -1,8 +1,6 @@
 var ll = ll || {}; //Maakt de variable app als globaal object aan. En als er al een variabele app bestaat voegt hij de app var toe. Dit voorkomt conflicten met andere libary's.
 
 ll.page = (function () {
-
-
     function home() {
         ll.helper.data('/api/feed')
             .then(response => {
