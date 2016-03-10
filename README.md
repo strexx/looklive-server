@@ -48,15 +48,15 @@ The API returns JSON (for now).
 ## Header image resize
 
 ### Before
-!(readme/header_before.png)
+![forthebadge](readme/header_before.png)
 
 ### After
-!(readme/header_after.png)
+![forthebadge](readme/header_after.png)
 
 ## jQuery include
 
 ### Before
-!(readme/jquery_off.png)
+![forthebadge](readme/jquery_off.png)
 
 ### After
-!(readme/jquery_on.png)
+![forthebadge](readme/jquery_on.png)
