@@ -64,7 +64,7 @@ The API returns JSON (for now).
 ## Icon spritesheet
 
 ### Before
-![forthebadge](readme/spritesheet_before.png)
+![forthebadge](readme/sprite_before.png)
 
 ### After
-![forthebadge](readme/spritesheet_after.png)
+![forthebadge](readme/sprite_after.png)
