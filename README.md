@@ -48,15 +48,15 @@ The API returns JSON (for now).
 ## Header image resize
 
 ### Before
-[Optimize](readme/header_before.png)
+!(readme/header_before.png)
 
 ### After
-[Optimize](readme/header_after.png)
+!(readme/header_after.png)
 
 ## jQuery include
 
 ### Before
-[Optimize](readme/jquery_off.png)
+!(readme/jquery_off.png)
 
 ### After
-[Optimize](readme/jquery_on.png)
+!(readme/jquery_on.png)
