@@ -42,3 +42,21 @@ appearance id.
 product id.
 
 The API returns JSON (for now).
+
+# Performance edits
+
+## Header image resize
+
+### Before
+(readme/header_before.png)
+
+### After
+(readme/header_after.png)
+
+## jQuery include
+
+### Before
+(readme/jquery_off.png)
+
+### After
+(readme/jquery_on.png)
