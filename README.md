@@ -60,3 +60,11 @@ The API returns JSON (for now).
 
 ### After
 ![forthebadge](readme/jquery_on.png)
+
+## Icon spritesheet
+
+### Before
+![forthebadge](readme/spritesheet_before.png)
+
+### After
+![forthebadge](readme/spritesheet_after.png)
