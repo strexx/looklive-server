@@ -88,16 +88,25 @@ gulp.task('images', function (cb) {
 });
 
 gulp.task('critical', function (cb) {
-  critical.generate({
-    base: './',
-    src: 'views/index.html',
-    css: ['./public/dist/css/style.css'],
-    width: 1300,
-    height: 400,
-    dest: 'public/dist/css/critical.css',
-    minify: true,
-    extract: false
-  });
+    critical.generate({
+        base: './',
+        src: 'views/index.html',
+        css: ['./public/dist/css/style.css'],
+        dimensions: [{
+            width: 320,
+            height: 480
+    }, {
+            width: 768,
+            height: 1024
+    }, {
+            width: 1280,
+            height: 960
+    }],
+        dest: 'public/dist/css/critical.css',
+        ignore: ['@font-face', /url\(/],
+        minify: true,
+        extract: false
+    });
 });
 
 
