@@ -1,4 +1,4 @@
-<div class="appearance" data-id="{{ item.id }}">
+<section class="appearance" data-id="{{ item.id }}">
     <div class="appearance-left">
         <img src="{{ item.image.url }}">
         {{#each item.product_occurrences}}
@@ -11,7 +11,7 @@
 
         <div class="appearance-products">
             <h1>Products</h1>
-            <div class="appearance-products-inner">
+            <div class="appearance-products__inner">
                 {{#each products}}
                     <div class="product" data-uuid="{{id}}">
                         <div class="actual">
@@ -41,4 +41,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>
