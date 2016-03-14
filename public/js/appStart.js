@@ -1,3 +1,9 @@
+'use strict';
+
+// Add namespace
+
+var APP = APP || {};
+
 // Start app
 APP.start = (function() {
 
