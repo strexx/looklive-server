@@ -1,21 +1,31 @@
 /************
 
- GLOBAL STYLES
- / RESET
+ Fonts
 
 *************/
 
-figure {
-    padding: 0;
-    margin: 0;
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Raleway Medium'), local('Raleway-Medium'), url(https://fonts.gstatic.com/s/raleway/v10/CcKI4k9un7TZVWzRVT-T873hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
 }
+
+
+/************
+
+ ICON FONT STYLES
+
+*************/
 
 i {
     text-indent: 200%;
     white-space: nowrap;
     overflow: hidden;
     display: inline-block;
+    margin-right: .5em;
 }
+
 
 /************
 
@@ -33,6 +43,7 @@ body a {
     color: #00B7FF;
 }
 
+
 /************
 
  HEADER
@@ -40,60 +51,62 @@ body a {
 *************/
 
 header {
+    background-color: #252525;
     display: flex;
     flex-direction: row;
-    background-color: #252525;
-    padding: .5em 1em;
+    flex-wrap: wrap;
     justify-content: space-between;
-}
-    .header__logo img {
-        height: 3.5em;
-    }
-
-    /************
-
-    NAV
-
-    *************/
-
-        
-    .nav__items {
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .nav__items__item {
-        height: 100%;
-        line-height: 30px;
-        margin-right: 1em;
-    }
-
-    .nav__items__item a {
-        color: white;
-        text-decoration: none;
-    }
-
-    .nav__items__item a:hover {
-        color: #d84a4a;
-    }
-
-/************
-
- BANNER 
-
-*************/
-
-.banner {
-    width: 100%;
+    align-content: space-between;
+    align-items: center;
     height: 50vh;
-    max-height: 56vw;
     overflow: hidden;
 }
 
-    .banner img {
-        width: 100%;
-    }
+.header__logo {
+    height: 30px;
+    padding: .5em 1em;
+    display: block;
+}
+
+
+/************
+
+ NAV
+
+*************/
+
+.nav__items {
+    list-style: none;
+}
+
+.nav__items__item {
+    height: 100%;
+    display: inline-block;
+    line-height: 30px;
+    margin-right: 1em;
+}
+
+.nav__items__item a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav__items__item a:hover {
+    color: #d84a4a;
+}
+
+/************
+
+ HEADER IMAGE
+
+*************/
+
+.header__image {
+    height: auto;
+    max-height: 56vw;
+    overflow: hidden;
+    width: 100%;
+}
 
 
 /************
@@ -103,7 +116,12 @@ header {
 *************/
 
 main {
-    padding: 50px;
+    padding: 3.125em;
+}
+
+main img {
+    max-width: 100%;
+    width: 100%;
 }
 
 
@@ -113,41 +131,37 @@ main {
 
 *************/
 
+.feed__items,
+.appearance {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .feed__item {
     width: 300px;
     height: 600px;
-    float: left;
     margin: .5em;
 }
 
-.feed__item img {
-    max-width: 100%;
+.feed__item h1 {
+    margin-top: 0;
 }
 
- .appearance-right,  .appearance-left {
-    float: left;
+.feed__item h2,
+.appearance h2 {
+    font-size: 16px;
+    margin-bottom: .5em;
+    display: inline-block;
 }
 
-.feed__item__avatar,  .appearance-right h2 img {
+.feed__item__avatar {
     width: 2em;
     height: 2em;
     margin-right: .5em;
     border-radius: 50%;
 }
 
-.feed__item h2,  .appearance h2 {
-    font-size: 16px;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    margin-bottom: .5em;
-}
-
-.feed__item h1 {
-    margin-top: 0;
-    font-size: 21px;
-}
 
 /************
 
@@ -159,18 +173,14 @@ main {
     font-size: 21px;
 }
 
-.appearance .appearance-left {
+.appearance__left {
     width: 400px;
     height: 600px;
     margin-right: 2em;
     position: relative;
 }
 
-.appearance-left img {
-    width: 100%;
-}
-
-.appearance .appearance-left .product-indicator {
+.product-indicator {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -179,7 +189,7 @@ main {
     border-radius: 50%;
 }
 
-.appearance .appearance-left .product-indicator.product-indicator-active {
+.product-indicator-active {
     background-color: #b4da55;
 }
 
@@ -190,7 +200,7 @@ main {
     height: 700px;
 }
 
-.appearance-products .product {
+.product {
     width: 450px;
     max-width: 100%;
     position: absolute;
@@ -199,25 +209,25 @@ main {
     transition: left .3s;
 }
 
-.appearance-products__inner .product.product-active {
+.product-active {
     left: 0;
 }
 
-.appearance-products h1 {
+.appearance-products > h1 {
     font-size: 21px;
     color: #333;
     padding-bottom: .5em;
     border-bottom: 1px solid #ddd;
 }
 
-.actual,  .similar {
-    display: -webkit-flex;
+.actual,
+.similar {
     display: flex;
     padding-bottom: .5em;
     border-bottom: 1px solid #ddd;
 }
 
-.actual .image, .similar .image {
+.image {
     width: 200px;
     -webkit-flex-shrink: 0;
     flex-shrink: 0;
@@ -228,24 +238,15 @@ main {
     width: 150px;
 }
 
-.actual .image h1, .similar .image h1 {
+.image h1 {
     margin: .5em 0;
-    color: #333;
-    font-size: 16px;
-    border-bottom: none;
 }
 
-.actual .image img,  .similar .image img {
-    width: 100%;
-}
-
-.actual .info h1,  .similar .info h1 {
-    font-size: 21px;
+.info h1 {
     margin: 1.5em 0 .5em 0;
-    border-bottom: none;
 }
 
-.actual .info h2,  .similar .info h2 {
+.info h2 {
     font-size: 16px;
     margin: 1em 0;
 }
