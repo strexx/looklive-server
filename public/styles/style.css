@@ -155,7 +155,7 @@ main img {
     display: inline-block;
 }
 
-.feed__item__avatar {
+.avatar {
     width: 2em;
     height: 2em;
     margin-right: .5em;
@@ -168,10 +168,6 @@ main img {
  APPEARANCE
 
 *************/
-
-.appearance h2 {
-    font-size: 21px;
-}
 
 .appearance__left {
     width: 400px;
@@ -205,12 +201,13 @@ main img {
     max-width: 100%;
     position: absolute;
     top: 0;
-    left: 100%;
-    transition: left .3s;
+    transform: translateX(100%) !important;
+    -webkit-transition: transform .3s;
+    transition: transform .3s;
 }
 
 .product-active {
-    left: 0;
+    transform: translateX(0) !important;
 }
 
 .appearance-products > h1 {
