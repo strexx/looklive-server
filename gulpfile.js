@@ -55,7 +55,7 @@ gulp.task('styles', function (cb) {
 
 // Scripts
 gulp.task('scripts', function (cb) {
-        gulp.src(['./public/js/appInit.js', './public/js/appStart.js', './public/js/app.js', './public/js/appRoutes.js', './public/js/appPage.js', './public/js/appGet.js'])
+        gulp.src(['./public/js/appStart.js', './public/js/app.js', './public/js/appRoutes.js', './public/js/appPage.js', './public/js/appGet.js'])
             .pipe(concat('app.js'))
             .pipe(gulp.dest('./public/dist/js/'))
             .pipe(notify({
@@ -85,7 +85,7 @@ gulp.task('watch', function () {
             }));
     });
     watch('./public/js/*.js', function () {
-        gulp.src(['./public/js/appInit.js', './public/js/appStart.js', './public/js/app.js', './public/js/appRoutes.js', './public/js/appPage.js', './public/js/appGet.js'])
+        gulp.src(['./public/js/appStart.js', './public/js/app.js', './public/js/appRoutes.js', './public/js/appPage.js', './public/js/appGet.js'])
             .pipe(concat('app.js'))
             .pipe(gulp.dest('./public/dist/js/'))
             .pipe(notify({
