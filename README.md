@@ -53,6 +53,10 @@ The API returns JSON (for now).
 ### After
 ![forthebadge](readme/header_after.png)
 
+### Conclusion
+
+The header image took **2.3 minutes** to load first and after compression it took **8.9 seconds** on a 2g internet connection.
+
 ## jQuery include
 
 ### Before
@@ -61,6 +65,10 @@ The API returns JSON (for now).
 ### After
 ![forthebadge](readme/jquery_on.png)
 
+### Conclusion
+
+With jQuery the page loads within **12.46** seconds and without jQuery the page loads in **11.42** seconds on a 4g internet connection.
+
 ## Icon spritesheet
 
 ### Before
@@ -68,6 +76,10 @@ The API returns JSON (for now).
 
 ### After
 ![forthebadge](readme/sprite_after.png)
+
+### Conclusion
+
+With an icon spritesheet the page loads within **12.60** seconds and without a spritesheet the page loads in **12.60** seconds on a 4g internet connection.
 
 # Progressive Web Apps
 
