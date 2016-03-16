@@ -79,7 +79,7 @@ With jQuery the page loads within **12.46** seconds and without jQuery the page 
 
 ### Conclusion
 
-With an icon spritesheet the page loads within **12.60** seconds and without a spritesheet the page loads in **12.60** seconds on a 4g internet connection.
+With an icon spritesheet the page loads within **12.60** seconds and without a spritesheet the page loads in **12.62** seconds on a 4g internet connection.
 
 # Progressive Web Apps
 
