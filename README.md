@@ -68,3 +68,37 @@ The API returns JSON (for now).
 
 ### After
 ![forthebadge](readme/sprite_after.png)
+
+# Progressive Web Apps
+
+### What is a Progressive Web App?
+
+A Progressive Web App provides an app-like user experience that is low friction and is built using modern web capabilities and hosted on the web and can become an app on the user's system over time.
+
+A progressive web app is built with Progressive Enhancement as the core tenant so that they work for as many users as possible irrespective of browser choice. When the User-Agent (such as Chrome, Opera and Firefox) supports technologies like Service Worker, Web Push, and the Add to Homescreen banner, the apps can be enhanced to provide a first class native-like experience for the user.
+
+### Progressive web apps are:
+
+- **Progressive** - They work for every user, regardless of the browser.
+- **Responsive** - They fit on every screen.
+- **Connectivity independent** - Enhanced with service workers to work offline and with low quality network connections.
+- **App-like** - Feel like a native application.
+- **Fresh**	- They are always up-to-date, thanks to the service worker.
+- **Safe** - Served via HTTPS.
+- **Discoverable** - Are identifiable as "applications", allowing search engines to find them.
+- **Re-engageable** - Make re-engagement easy through features like push notifications.
+- **Installable** - Allow users to keep apps on the home screen, without needing an app store.
+- **Linkable** - Easily shareable via URL.
+
+### Progressive must-haves
+
+At a high level, for a web app to be considered “progressive” it must do three things:
+
+- Register a service worker — a series of APIs championed by Google that allows for offline access, web push notifications, and more.
+- Run on HTTPS, which is a hard requirement imposed by the service workers spec to prevent man-in-the-middle attacks.
+- Create an app manifest file, which specifies a bunch of information about your app such as its name.
+
+## Sources:
+
+- https://developers.google.com/web/progressive-web-apps
+- https://addyosmani.com/blog/getting-started-with-progressive-web-apps/
