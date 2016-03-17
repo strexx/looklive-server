@@ -53,9 +53,10 @@ The API returns JSON (for now).
 ### After
 ![forthebadge](readme/header_after.png)
 
-### Conclusion
+### Summary
 
 The header image took **2.3 minutes** to load first and after compression it took **8.9 seconds** on a 2g internet connection.
+This is a difference of more than 2 minutes and a huge performance boost for your website.
 
 ## jQuery include
 
@@ -65,9 +66,9 @@ The header image took **2.3 minutes** to load first and after compression it too
 ### After
 ![forthebadge](readme/jquery_on.png)
 
-### Conclusion
+### Summary
 
-With jQuery the page loads within **12.46** seconds and without jQuery the page loads in **11.42** seconds on a 4g internet connection.
+With jQuery the page loads within **12.46** seconds and without jQuery the page loads in **11.42** seconds on a 4g internet connection. jQuery is a serious plugin which costs a lot of loading time. My advice would be: rethink your application if you really need jQuery for your application. Otherwise just try and use vanilla Javascript.
 
 ## Icon spritesheet
 
@@ -77,9 +78,23 @@ With jQuery the page loads within **12.46** seconds and without jQuery the page 
 ### After
 ![forthebadge](readme/sprite_after.png)
 
-### Conclusion
+### Summary
 
-With an icon spritesheet the page loads within **12.60** seconds and without a spritesheet the page loads in **12.62** seconds on a 4g internet connection.
+With an icon spritesheet the page loads within **12.60** seconds and without a spritesheet the page loads in **12.62** seconds on a 4g internet connection. As you can see this not a big win for performance, but it helps a couple of milliseconds.
+
+## Conclusion
+
+Before adding changes to this project, the loading time of the application was 5.32 seconds (tested in Google Chrome).
+Because of a "bug" in my browser, the browser doesn't show the first loading time accurate. I was testing this by turning jQuery on and off and by doing this sometimes the first load event takes 1.43 ms and sometimes it takes 12+ seconds. This is why I haven't shown screenshots of my Timeline panel in Chrome.
+
+Tests with results in short:
+- Header image resize: from **2.3 minutes** to **8.9 seconds** loading time at 2g connection
+- jQuery includes: from **12.46 seconds** to **11.42 seconds** loading time at 4g connection
+- Icon spritesheet: from **12.62 seconds** tot **12.60 seconds** loading time at 4g connection
+- Changing HTML structure: this didn't had many impact on loading speed. Only a couple of milliseconds (1-3).
+- Changing CSS specific selectors: this didn't had many impact on loading speed. Only a couple of milliseconds (1-3).
+- Changing to a Single Page Webapp: because of extra libraries this cost extra loading time and made the application slower.
+
 
 # Progressive Web Apps
 
