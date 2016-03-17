@@ -1,6 +1,6 @@
 # Serviceworker performance edits
 
-With my integration of the serviceworker I've cached javascript libraries, stylesheets and images. Doing this increasingly speeds up your first load event as we can see in my results with no throttling.
+With my integration of the serviceworker I've cached javascript libraries, stylesheets and images. Doing this increasingly speeded up my your first load event as you can see in my results with no throttling.
 
 #### Before adding my serviceworker caching files
 ![Before Serviceworker](readme/before_serviceworker.png)
