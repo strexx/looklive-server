@@ -16,6 +16,8 @@ Offline is even faster. As you can see here:
 
 ![Offline performance with Serviceworker](readme/offline_performance.png)
 
+Load event: **249 milliseconds**
+
 Here you can see files are served from the serviceworker:
 
 ![Offline serviceworker network tab](readme/offline_networktab.png)
