@@ -20,3 +20,6 @@ Here you can see files are served from the serviceworker:
 
 ![Offline serviceworker network tab](readme/offline_networktab.png)
 
+## Conclusion
+Using a serviceworker drastically increased the performance of my application. These performance edits are even more essential for 3g networks on mobile devices where it takes a bit more time to load content.
+
