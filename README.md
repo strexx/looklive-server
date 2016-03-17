@@ -43,28 +43,12 @@ product id.
 
 The API returns JSON (for now).
 
-# Performance edits
+# Serviceworker performance points
 
-## Header image resize
+With my integration of the serviceworker I've cached javascript libraries, stylesheets and images. Doing this increasingly speeds up your first load event as we can see in my results.
 
-### Before
-![forthebadge](readme/header_before.png)
+#### Before adding my serviceworker caching files
+![Before Serviceworker](readme/before_serviceworker.png)
 
-### After
-![forthebadge](readme/header_after.png)
-
-## jQuery include
-
-### Before
-![forthebadge](readme/jquery_off.png)
-
-### After
-![forthebadge](readme/jquery_on.png)
-
-## Icon spritesheet
-
-### Before
-![forthebadge](readme/sprite_before.png)
-
-### After
-![forthebadge](readme/sprite_after.png)
+#### After adding my serviceworker caching files
+![After Serviceworker](readme/after_serviceworker.png)
