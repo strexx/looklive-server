@@ -12,11 +12,23 @@ The basic principle for Grunt is to give us an easy way to run tasks. A task is 
 
 #### Gulp
 
-Gulp is an alternative to grunt. It is a bit more recent and has a reputation as being more flexible than grunt. Before choosing which one you will use, let’s have a look at how gulp works.
+Gulp is an alternative to grunt. It is a bit more recent and has a reputation as being more flexible than grunt.
 
 Gulp (http://gulpjs.com/) is a workflow automation tool. Like grunt, it works using npm and the package.json file. All available plugins will also be downloaded using npm and added as devDependencies in the package.json file.
 
+#### Difference
+
 One of the main differences with Gulp is that it uses streams. A stream is a set of functions through which a file will go and be modified in memory. The file will be written on the disk only at the end of the process so it is more efficient. Grunt tasks, on the other hand, work as silos and cannot be chained.
+
+**Process**
+
+Assume you would like to write SASS code for your project. You would want to compile your SASS code and then perhaps minify it.
+
+Grunt handles this using intermediary files which are disk I/O operations. Your SASS file is compiled and then written to a temporary file. The temporary file is used by the autoprefixer and then the final product is written to the destination file.
+
+Gulp takes care of all this in-memory. Your source SASS file is compiled, the result is passed to the autoprefixer without being written to a file and the destination file is then written out.
+
+Compared to in-memory operations, disk writes are slow which means that Gulp has a big speed advantage (for now). A speed comparison was done by tech.tmw which shows that most tasks are at least twice as fast on Gulp.
 
 #### Conclusion
 
