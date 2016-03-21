@@ -19,5 +19,5 @@ Gulp (http://gulpjs.com/) is a workflow automation tool. Like grunt, it works us
 One of the main differences with Gulp is that it uses streams. A stream is a set of functions through which a file will go and be modified in memory. The file will be written on the disk only at the end of the process so it is more efficient. Grunt tasks, on the other hand, work as silos and cannot be chained.
 
 ## Sources:
-http://www.sitepoint.com/how-to-grunt-and-gulp-your-way-to-workflow-automation/
-http://yeoman.io/blog/performance-optimization.html
+- http://www.sitepoint.com/how-to-grunt-and-gulp-your-way-to-workflow-automation/
+- http://yeoman.io/blog/performance-optimization.html
