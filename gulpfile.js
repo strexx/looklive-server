@@ -57,6 +57,10 @@ gulp.task('styles', function (cb) {
 gulp.task('scripts', function (cb) {
         gulp.src(['./public/js/appStart.js', './public/js/app.js', './public/js/appRoutes.js', './public/js/appPage.js', './public/js/appGet.js'])
             .pipe(concat('app.js'))
+            .pipe(babel({
+                presets: ['es2015']
+            }))
+            .pipe(uglify())
             .pipe(gulp.dest('./public/dist/js/'))
             .pipe(notify({
                 message: 'Scripts task complete'
@@ -72,21 +76,20 @@ gulp.task('default', function () {
 gulp.task('watch', function () {
     watch('./public/styles/*.css', function () {
         gulp.src(['./public/styles/*.css', './public/icons/sprite/sprite.css'])
-            .pipe(concat('style.css'))
-            .pipe(cleanCSS({
-                compatibility: 'ie8'
-            }))
-            .pipe(postcss([autoprefixer({
-                browsers: ['> 1%', 'IE 7']
-            })]))
-            .pipe(gulp.dest('./public/dist/css/'))
-            .pipe(notify({
-                message: 'Styles compiling complete'
-            }));
+        .pipe(concat('style.css'))
+        .pipe(cssnano())
+        .pipe(gulp.dest('./public/dist/css/'))
+        .pipe(notify({
+            message: 'Styles compiling complete'
+        }));
     });
     watch('./public/js/*.js', function () {
         gulp.src(['./public/js/appStart.js', './public/js/app.js', './public/js/appRoutes.js', './public/js/appPage.js', './public/js/appGet.js'])
             .pipe(concat('app.js'))
+            .pipe(babel({
+                presets: ['es2015']
+            }))
+            .pipe(uglify())
             .pipe(gulp.dest('./public/dist/js/'))
             .pipe(notify({
                 message: 'Scripts task complete'
