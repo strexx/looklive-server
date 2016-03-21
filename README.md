@@ -51,6 +51,8 @@ I chose to use Gulp because I like its cleaner API better. While there are diffe
 
 # Opdracht 2
 
+## Optmising HTTP-requests
+
 Reducing HTTP-requests increases the performance of your application. Therefore I've added some automation tasks with Gulp to help speed up my edit of the LookLive application.
 
 ### Before
@@ -63,6 +65,24 @@ First load event: **11.81s**
 
 First load event: **11.71s**
 
-## Conclusion
+### Conclusion
 
 Difference between load events before and after concatenating files is **100 milliseconds**.
+
+## Optimising web fonts
+
+When trying to optimise web fonts, I found out that the inital page load is slower than before. This is because this edit
+enhances the perceived performance and not the total performance of the webapp. So the application shows the fonts at the very first paint of the application, but it's slower in the end. Foit
+
+### Before
+![Before webfonts](readme/before_fonts_1189.png)
+
+First load event: **11.89s**
+
+### After
+![After webfonts](readme/after_fonts_1198.png)
+
+First load event: **11.98s**
+
+### Conclusion
+The difference is 10 milliseconds when 
