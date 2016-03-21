@@ -53,8 +53,16 @@ I chose to use Gulp because I like its cleaner API better. While there are diffe
 
 Reducing HTTP-requests increases the performance of your application. Therefore I've added some automation tasks with Gulp to help speed up my edit of the LookLive application.
 
-## Before
+### Before
 ![Before concatenating](readme/before_concat.png)
 
-## After
+First load event: **11.81s**
+
+### After
 ![After concatenating](readme/after_concat.png)
+
+First load event: **11.71s**
+
+## Conclusion
+
+Difference between load events before and after concatenating files is **100 milliseconds**.
