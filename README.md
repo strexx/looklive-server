@@ -71,8 +71,7 @@ Difference between load events before and after concatenating files is **100 mil
 
 ## Optimising web fonts
 
-When trying to optimise web fonts, I found out that the inital page load is slower than before. This is because this edit
-enhances the perceived performance and not the total performance of the webapp. So the application shows the fonts at the very first paint of the application, but it's slower in the end. Foit
+When trying to optimise web fonts, I found out that the inital page load is slower than before when applying a font face observer. This will monitor when a web font is applied to the page and notifies you. It does not limit you in any way in where, when, or how you load your web fonts. In my case this change enhanced the perceived performance, but not the page load performance of the webapp. So the application shows the fonts at the very first paint of the application, but it's slower in the end.
 
 ### Before
 ![Before webfonts](readme/before_fonts_1189.png)
@@ -85,4 +84,4 @@ First load event: **11.89s**
 First load event: **11.98s**
 
 ### Conclusion
-The difference is 10 milliseconds when 
+The difference between the initial page load is 10 milliseconds after optimising.
