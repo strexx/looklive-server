@@ -48,3 +48,13 @@ I chose to use Gulp because I like its cleaner API better. While there are diffe
 - http://www.sitepoint.com/how-to-grunt-and-gulp-your-way-to-workflow-automation/
 - http://yeoman.io/blog/performance-optimization.html
 - http://www.hongkiat.com/blog/gulp-vs-grunt/
+
+# Opdracht 2
+
+Reducing HTTP-requests increases the performance of your application. Therefore I've added some automation tasks with Gulp to help speed up my edit of the LookLive application.
+
+## Before
+![Before concatenating](readme/before_concat.png)
+
+## After
+![After concatenating](readme/after_concat.png)
