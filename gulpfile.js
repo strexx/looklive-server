@@ -9,7 +9,9 @@ var gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
     svgSprite = require('gulp-svg-sprite'),
-    nodemon = require('gulp-nodemon');
+    nodemon = require('gulp-nodemon'),
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant');
 
 var svgConfig = {
     dest: '.',
@@ -40,6 +42,20 @@ gulp.task('icons', function () {
     gulp.src('./public//icons/svg/*.svg')
         .pipe(svgSprite(svgConfig))
         .pipe(gulp.dest('./public/icons/sprite/'));
+});
+
+// Image min
+gulp.task('image-min', function () {
+    return gulp.src('./public/images/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('./public/dist/images/'));
+        .pipe(notify({
+            message: 'Image min task complete'
+        }));
 });
 
 // Styles
