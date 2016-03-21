@@ -57,3 +57,4 @@ Reducing HTTP-requests increases the performance of your application. Therefore 
 ![Before concatenating](readme/before_concat.png)
 
 ## After
+![After concatenating](readme/after_concat.png)
