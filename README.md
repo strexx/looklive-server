@@ -84,4 +84,4 @@ First load event: **11.89s**
 First load event: **11.98s**
 
 ### Conclusion
-The difference between the initial page load is 10 milliseconds after optimising.
+The difference between the initial page load is 10 milliseconds after optimising. But you can see that the rendering and the painting is faster than before this change.
