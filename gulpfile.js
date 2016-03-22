@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant');
+    //responsive = require('gulp-responsive');
 
 var svgConfig = {
     dest: '.',
@@ -37,6 +38,26 @@ var svgConfig = {
     }
 };
 
+// Images
+gulp.task('images', function () {
+  return gulp.src('./public/images/*.{png,jpg}')
+    .pipe(responsive({
+      'logo.png': [
+        {
+          width: 412,
+          quality: 50
+        },{
+          width: 412 * 2,
+          rename: 'logo@2x.png'
+        },{
+          width: 412 * 3,
+          rename: 'logo@3x.png'
+        }
+      ]
+    }))
+    .pipe(gulp.dest('./public/dist/images/'));
+});
+
 // Icon sprite
 gulp.task('icons', function () {
     gulp.src('./public//icons/svg/*.svg')
@@ -52,7 +73,7 @@ gulp.task('image-min', function () {
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))
-        .pipe(gulp.dest('./public/dist/images/'));
+        .pipe(gulp.dest('./public/dist/images/'))
         .pipe(notify({
             message: 'Image min task complete'
         }));
@@ -71,16 +92,16 @@ gulp.task('styles', function (cb) {
 
 // Scripts
 gulp.task('scripts', function (cb) {
-        gulp.src(['./public/js/appStart.js', './public/js/app.js', './public/js/appRoutes.js', './public/js/appPage.js', './public/js/appGet.js'])
-            .pipe(concat('app.js'))
-            .pipe(babel({
-                presets: ['es2015']
-            }))
-            .pipe(uglify())
-            .pipe(gulp.dest('./public/dist/js/'))
-            .pipe(notify({
-                message: 'Scripts task complete'
-            }));
+    gulp.src(['./public/js/appStart.js', './public/js/app.js', './public/js/appRoutes.js', './public/js/appPage.js', './public/js/appGet.js'])
+        .pipe(concat('app.js'))
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest('./public/dist/js/'))
+        .pipe(notify({
+            message: 'Scripts task complete'
+        }));
 });
 
 // Default task
