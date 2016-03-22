@@ -1,4 +1,12 @@
-APP.get = (function() {
+APP.get = (function() {    
+
+    function customFonts() {
+        var observer = new FontFaceObserver('Raleway');
+
+        observer.check().then(function () {
+          document.body.className += "fonts-loaded";
+        });
+    };
 
     function data(url) {
         // return a Promise object
@@ -24,7 +32,8 @@ APP.get = (function() {
     };
 
     return {
-        data: data
+        data: data,
+        customFonts: customFonts
     }
 
 })();
