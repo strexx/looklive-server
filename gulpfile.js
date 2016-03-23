@@ -72,7 +72,8 @@ gulp.task('styles', function (cb) {
 
 // Scripts
 gulp.task('scripts', function (cb) {
-    gulp.src(['./public/js/appStart.js', './public/js/app.js', './public/js/appRoutes.js', './public/js/appPage.js', './public/js/appGet.js'])
+
+    gulp.src(['./public/js/appStart.js', './public/js/app.js', './public/js/appRoutes.js', './public/js/appPage.js', './public/js/appGet.js', './public/js/appServiceworker.js', './public/js/sw.js'])
         .pipe(concat('app.js'))
         .pipe(babel({
             presets: ['es2015']
@@ -101,7 +102,7 @@ gulp.task('watch', function () {
         }));
     });
     watch('./public/js/*.js', function () {
-        gulp.src(['./public/js/appStart.js', './public/js/app.js', './public/js/appRoutes.js', './public/js/appPage.js', './public/js/appGet.js'])
+        gulp.src(['./public/js/appStart.js', './public/js/app.js', './public/js/appRoutes.js', './public/js/appPage.js', './public/js/appGet.js', './public/js/appServiceworker.js', './public/js/sw.js'])
             .pipe(concat('app.js'))
             .pipe(babel({
                 presets: ['es2015']
