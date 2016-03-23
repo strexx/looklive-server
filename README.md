@@ -94,13 +94,13 @@ For compressing images I've used the image-min gulp package. This drastically bo
 ![Before imagemin](readme/before_imagemin_1571.png)
 
 - header.png size: **2mb**
-- First load event: **15.71**
+- First load event: **15.71s**
 
 ### After 
 ![After imagemin](readme/after_imagemin_1358.png)
 
 - header.png size: **1.1mb**
-- First load event: **13.58**
+- First load event: **13.58s**
 
 ### Conclusion
 
