@@ -3,11 +3,13 @@
 // Add namespace
 
 var APP = APP || {};
+
 // Start app
 APP.start = (function() {
 
     var init = function() {
         APP.routes.init();
+        APP.serviceWorker.init();
     };
 
     return {
@@ -208,3 +210,42 @@ APP.get = (function() {
     }
 
 })();
+APP.serviceWorker = (function() {
+
+    function init() {
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js', {
+                    scope: './'
+                })
+                .then(reg => console.info('Succes', reg))
+                .catch(err => console.error('Error', err));
+        } else {
+            console.log('ServiceWorker is not supported in this browser');
+        }
+    };
+
+    return {
+        init: init
+    }
+
+})();
+// Service worker installation
+this.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open('looklive-v1').then(cache => {
+      return cache.addAll([
+        './',
+        '../css/style.css',
+        './app.js'
+      ]);
+    })
+  );
+});
+
+
+this.addEventListener('activate', event => console.log('activated', event));
+this.addEventListener('fetch', event => console.log('fetching', event));
+this.addEventListener('push', event => console.log('pushed', event));
+this.addEventListener('sync', event => console.log('do sync', event));
+this.addEventListener('message', event => console.log('message received', event));
