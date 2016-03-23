@@ -169,8 +169,6 @@ I chose to use Gulp because I like its cleaner API better. While there are diffe
 - http://yeoman.io/blog/performance-optimization.html
 - http://www.hongkiat.com/blog/gulp-vs-grunt/
 
-## Opdracht 2
-
 ### Optmising HTTP-requests
 
 Reducing HTTP-requests increases the performance of your application. Therefore I've added some automation tasks with Gulp to help speed up my edit of the LookLive application.
