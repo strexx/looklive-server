@@ -91,16 +91,16 @@ The difference between the initial page load is 10 milliseconds after optimising
 For compressing images I've used the image-min gulp package. This drastically boosts your overall performance because it uses advanced techniques and is bundled with lossless optimizers. See [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin). For this project I've saved the header image as JPG file which is how it should be, but to really demonstrate the performance I've compressed the big header.png image and tested this with a 4g connection.
 
 ### Before
-![Before image-min](readme/before_imagemin_1571.png]
+!(readme/before_imagemin_1571.png]
 
-header.png size: **2mb**
-First load event: **15.71**
+- header.png size: **2mb**
+- First load event: **15.71**
 
 ### After 
-![After image-min](readme/after_imagemin_1358.png]
+!(readme/after_imagemin_1358.png]
 
-header.png size: **1.1mb**
-First load event: **13.58**
+- header.png size: **1.1mb**
+- First load event: **13.58**
 
 ### Conclusion
 
