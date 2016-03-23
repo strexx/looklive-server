@@ -10,6 +10,7 @@ APP.start = (function() {
     var init = function() {
         APP.routes.init();
         APP.get.customFonts();
+        APP.serviceWorker.init();
     };
 
     return {
