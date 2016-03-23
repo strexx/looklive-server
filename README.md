@@ -97,7 +97,7 @@ header.png size: **2mb**
 First load event: **15.71**
 
 ### After 
-![Before image-min](readme/after_imagemin_1358.png]
+![After image-min](readme/after_imagemin_1358.png]
 
 header.png size: **1.1mb**
 First load event: **13.58**
