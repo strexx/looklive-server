@@ -3,6 +3,16 @@ Live demo: https://fons.alleenmedia.nl
 
 # Week 1
 
+**Todo:**
+
+- Look-Live server install
+- Semantic HTML 
+- Optimizing CSS selectors & properties 
+- Interface Images (spritesheets) 
+- One page app
+- Critical CSS (extra) 
+- Minimal Gulp / Grunt pipeline (extra)
+
 ### Header image resize
 
 #### Before
@@ -54,6 +64,12 @@ Tests with results in short:
 - Changing to a Single Page Webapp: because of extra libraries this cost extra loading time and made the application slower.
 
 # Week 2
+
+**Todo:**
+
+- Implement Serviceworker
+- Research Progressive Web Apps  
+- Install LookLive server online
 
 ## Progressive Web Apps
 
@@ -117,6 +133,13 @@ Here you can see files are served from the serviceworker:
 Using a serviceworker drastically increased the performance of my application. These performance edits are even more essential for 3g networks on mobile devices where it takes a bit more time to load content.
 
 # Week 3
+
+**Todo:**
+
+- Optimise HTTP requests
+- Optimise content images 
+- Optimise web fonts 
+- Create staging and production environment (extra)
 
 ## Task managers
 
