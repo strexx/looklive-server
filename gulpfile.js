@@ -38,26 +38,6 @@ var svgConfig = {
     }
 };
 
-// Images
-gulp.task('images', function () {
-  return gulp.src('./public/images/*.{png,jpg}')
-    .pipe(responsive({
-      'logo.png': [
-        {
-          width: 412,
-          quality: 50
-        },{
-          width: 412 * 2,
-          rename: 'logo@2x.png'
-        },{
-          width: 412 * 3,
-          rename: 'logo@3x.png'
-        }
-      ]
-    }))
-    .pipe(gulp.dest('./public/dist/images/'));
-});
-
 // Icon sprite
 gulp.task('icons', function () {
     gulp.src('./public//icons/svg/*.svg')
