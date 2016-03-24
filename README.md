@@ -249,3 +249,36 @@ For compressing images I've used the image-min gulp package. This drastically bo
 
 Difference between load events is **2.13** seconds and the gulp-imagemin plugin compressed the header with **900 kb's**.
 This is a big win for your application.
+
+-------
+
+# Results and advice summary
+
+Installing this application without any adjustments, the inital page loadevent on a 4G connection took **15.42 seconds**.
+Lets see what I have done in the past weeks to reduce this page load:
+
+** Recap of performance edits **
+
+- Rewrite semantic HTML and CSS with specific selectors.
+- Optimized the header image by converting to JPG and compressing plugins.
+- Optimized the icons to a SVG prite sheet.
+- Rewrite the jQuery toggle function in the appearance page to vanilla JS.
+- Rewrite the app to a single page app. So only the content that is needed will be reloaded.
+- Add a service worker for caching content and offline availability.
+- Minify and bundle the CSS and JS files to reduce HTTP-requests.
+- Using fontobserver to use the fonts if they are loaded. This enhances first render.
+
+** Extra to-do **
+- Add critical / loadCSS for faster page rendering.
+
+After doing all this, the initial page load of this application contains **11.64 seconds**.
+
+Difference: ** 3.78 seconds ** since before.
+
+**Note:** this is without running the serviceworker, which reduces the page load with a remarkable amount of nearly ** 10 seconds **.
+
+## Advice
+
+With a lot of traffic and the need of visitors to stay on your website, it's best to serve your website with the best performance. These are mostly low hanging fruits now we have task managers to do a lot of stuff we don't even have to think about. In the case of looklive the best way is to check the website if there aren't any oversized images, like the header for instance. By only saving it as a JPG file you can win seconds on the loading time and it takes less than a minute to fix this.
+
+If you take some time to study the implementation and workflow of these task managers, it's almost a 100 % certainty that it will lead to more conversion on your website.
