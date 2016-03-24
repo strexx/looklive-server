@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     svgSprite = require('gulp-svg-sprite'),
     nodemon = require('gulp-nodemon'),
     imagemin = require('gulp-imagemin'),
+    critical = require('critical'),
     pngquant = require('imagemin-pngquant');
     //responsive = require('gulp-responsive');
 
@@ -37,6 +38,28 @@ var svgConfig = {
         }
     }
 };
+
+gulp.task('critical', function (cb) {
+    return critical.generate({
+        base: './',
+        src: 'views/index.html',
+        css: ['./public/dist/css/style.css'],
+        dimensions: [{
+            width: 320,
+            height: 480
+    }, {
+            width: 768,
+            height: 1024
+    }, {
+            width: 1280,
+            height: 960
+    }],
+        dest: 'public/dist/css/critical.css',
+        ignore: ['@font-face', /url\(/],
+        minify: true,
+        extract: false
+    });
+});
 
 // Icon sprite
 gulp.task('icons', function () {
