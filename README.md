@@ -257,7 +257,7 @@ This is a big win for your application.
 Installing this application without any adjustments, the inital page loadevent on a 4G connection took **15.42 seconds**.
 Lets see what I have done in the past weeks to reduce this page load:
 
-** Recap of performance edits **
+**Recap of performance edits**
 
 - Rewrite semantic HTML and CSS with specific selectors.
 - Optimized the header image by converting to JPG and compressing plugins.
@@ -268,12 +268,12 @@ Lets see what I have done in the past weeks to reduce this page load:
 - Minify and bundle the CSS and JS files to reduce HTTP-requests.
 - Using fontobserver to use the fonts if they are loaded. This enhances first render.
 
-** Extra to-do **
+**Extra to-do**
 - Add critical / loadCSS for faster page rendering.
 
 After doing all this, the initial page load of this application contains **11.64 seconds**.
 
-Difference: ** 3.78 seconds ** since before.
+Difference: **3.78 seconds** since before.
 
 **Note:** this is without running the serviceworker, which reduces the page load with a remarkable amount of nearly ** 10 seconds **.
 
